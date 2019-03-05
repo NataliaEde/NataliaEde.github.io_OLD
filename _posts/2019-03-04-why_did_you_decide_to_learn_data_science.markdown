@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Why did you decide to learn data science""
-date:       2019-03-05 01:29:24 +0000
+title:      "Why did you decide to learn data science?""
+date:       2019-03-04 20:29:25 -0500
 permalink:  why_did_you_decide_to_learn_data_science
 ---
 
