@@ -1,10 +1,12 @@
 ---
 layout: post
-title:      "Why did you decide to learn data science?"
+title:      "# Why did you decide to learn data science?"
 date:       2019-03-04 20:29:25 -0500
 permalink:  why_did_you_decide_to_learn_data_science
 ---
 
+
+![](https://i.imgur.com/4d0yHCX.jpg)
 
 
 It's been almost a year since I've been on a prolonged leave after giving birth to my third child. Prior to taking this leave, I had spent ten years in financial services as an Investor Relations Personnel. A large portion of my position was dealing with datasets which were primarily collected on excel spreadsheets.
