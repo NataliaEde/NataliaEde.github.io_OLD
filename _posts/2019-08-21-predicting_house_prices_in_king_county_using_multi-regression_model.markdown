@@ -5,11 +5,11 @@ date:       2019-08-21 22:28:48 -0400
 permalink:  predicting_house_prices_in_king_county_using_multi-regression_model
 ---
 
- ## Data Visualization
+## Data Visualization
 
 
 
-*Natalia Edelson*
+
 
 
 
