@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Predicting House Prices in King County using Multi-Regression Model"
-date:       2019-08-22 02:28:47 +0000
+date:       2019-08-21 22:28:48 -0400
 permalink:  predicting_house_prices_in_king_county_using_multi-regression_model
 ---
 
