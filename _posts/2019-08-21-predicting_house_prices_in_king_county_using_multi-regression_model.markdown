@@ -163,7 +163,8 @@ print ('point biserial correlation r is %s with p = %s' %(r,p))
 We conclude from this picture the median is much higher for waterfront houses ($1.7million) versus non-waterfront ($0.5 million) and the range of prices is wider with a house that has a waterfront view. (Waterfront view: $0.5 – $5.5 Million, Non-waterfront view:$0.2- $1.3 Million)
  
  
- ###Exploring the data 
+ 
+ ### Exploring the data 
  
 We are exploring the data and specifically looking into the linear relation of the independent variable to the dependent ones. It is helpful to extrapolate each variable and detect the relationship it has with the target variable. (e.g. Prices of houses)
 
