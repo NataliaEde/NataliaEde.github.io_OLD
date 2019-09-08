@@ -138,8 +138,10 @@ sns.heatmap(corr, mask=mask, cmap=cmap, vmax=1, center=0,
 Waterfront variable is an interesting one and required us to dig deeper to understand the relationship of waterfront view to the property prices. When dealing with categorical data, especially when it is binary, it is helpful to use Box Plot graph.
  
 
-```
 
+
+
+```
 from scipy import stats, linalg
  
 fig, ax = plt.subplots(figsize=(12,4))
@@ -150,9 +152,10 @@ plt.show()
  
 r, p = stats.pointbiserialr(df['waterfront'], df['price'])
 print ('point biserial correlation r is %s with p = %s' %(r,p))
- 
- ```
+```
 
+ 
+ 
  
  ![](https://i.imgur.com/M26pKLH.png)
  
@@ -166,9 +169,10 @@ We are exploring the data and specifically looking into the linear relation of t
 
 Let’s examine Sqft_Living.  The code below takes the indicated columns and builds a join graph of density and scatter plot vs. price. We show the sqft_living example in this post. 
  
- ```
 
 
+
+```
 for column in [ 'sqft_living','bathrooms', 'bedrooms', 'sqft_lot', 'sqft_above']:
     sns.jointplot(x=column, y="price",
                   data=df, 
