@@ -201,13 +201,11 @@ Lastly, we need to confirm that our residuals are normally distributed or else o
 Following a split train test, we can use this simple code to graph the residuals. 
 
 ```
-
 sns.distplot(train_residuals)
 plt.title('Residulas' )
 plt.xlabel('X')
 plt.ylabel('density')
 plt.show()
-
 ```
 
 
