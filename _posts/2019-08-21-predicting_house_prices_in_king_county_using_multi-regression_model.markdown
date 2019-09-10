@@ -174,16 +174,20 @@ Let’s examine Sqft_Living.  The code below takes the indicated columns and bui
 
 
 ```
-for column in [ 'sqft_living','bathrooms', 'bedrooms', 'sqft_lot', 'sqft_above']:
-    sns.jointplot(x=column, y="price",
+
+      for column in [ 'sqft_living','bathrooms', 'bedrooms', 'sqft_lot', 'sqft_above']:
+         sns.jointplot(x=column, y="price",
                   data=df, 
                   kind='reg', 
                   label=column,
                   joint_kws={'line_kws':{'color':'green'}})
-    plt.legend()
-    plt.show()
-	```
+        plt.legend()
+         plt.show()
+
+```
 	
+
+
 
 ![](https://i.imgur.com/QmRcGT4.pnghttp)
 
@@ -206,11 +210,12 @@ Lastly, we need to confirm that our residuals are normally distributed or else o
 Following a split train test, we can use this simple code to graph the residuals. 
 
 ```
-sns.distplot(train_residuals)
-plt.title('Residulas' )
-plt.xlabel('X')
-plt.ylabel('density')
-plt.show()
+      sns.distplot(train_residuals)
+      plt.title('Residulas' )
+      plt.xlabel('X')
+      plt.ylabel('density')
+      plt.show()
+			
 ```
 
 
