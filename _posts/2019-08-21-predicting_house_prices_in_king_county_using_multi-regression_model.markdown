@@ -27,7 +27,7 @@ We aim to identify the most important features to consider when selling a house.
 In this blog post, I will focus on how we utilize visualization in the project. We have substantial data and we will use the OSEMiN approach to tackle our goal. 
  
 
-### NaNs
+### Checking on NULL values
 
 As soon as we upload our data, we start “scrubbing it”. One of the first elements we look at is the NaN values. First, we look at it from a numerical perspective and sum of the NaN values for each variable.
  
