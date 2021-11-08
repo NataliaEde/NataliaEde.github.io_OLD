@@ -9,9 +9,10 @@ permalink:  why_did_you_decide_to_learn_data_science
 
 Natalia Edelson
 
+![](https://i.imgur.com/aJVNKcO.png/)
 
 
-In recent years, telecom companies have been facing the increasing challenge of customer’s attrition. Telecom companies are focused on predicting customer churn in order to avoid a major fall in their revenue. It’s often the case that onboarding a new customer is more costly than retaining an existing client. For the purpose of this case study, we will gather data of the telecom company SyriaTel and our analysis will be centered around the possible ways it can reduce its churn.    
+Telecom companies have been facing the increasing  challenge of customer’s attrition. Telecom companies are focused on predicting customer churn in order to avoid a major fall in their revenue. It’s often the case that onboarding a new customer is more costly than retaining an existing client. For the purpose of this case study, we will gather data of the telecom company SyriaTel and our analysis will be centered around the possible ways it can reduce its churn.    
 
 
 SyriaTel had seen 16% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
@@ -72,7 +73,11 @@ Out[]:0
 display(Customer_Churn.describe())
 ```
 
-![](https://i.imgur.com/MQQECcC.png)
+
+
+
+
+![](https://imgur.com/eYPcNof) 
 
 
 We compare the mean versus the max and min values in order to sort outliers or potential mistakes. There are no outliers in this data. Overall, the data is clean. It doesn’t have missing values nor unnecessary fillers. (In the coding on Github one can find more details on the unhelpful variables we chose to omit).
@@ -86,7 +91,7 @@ We compare the mean versus the max and min values in order to sort outliers or p
 In a classified problem it is important to check whether the data is imbalanced. When we start building our model it will be key to take this into account when evaluating the results. 
 
 
-![](https://i.imgur.com/eYPcNof)
+![](https://imgur.com/eYPcNof)
 
 We can see the data is not balanced as 85% of people are not churning.
 
@@ -112,11 +117,9 @@ sns.heatmap(corr, mask=mask, cmap=cmap, vmax=1, center=0,
 plt.title(' Costumer Churn Variables - Correlation Matric Hat Map ')
 ```
 
-![](https://i.imgur.com/2AbuItr.png)
 
 
-![](https://i.imgur.com/yVjPQTr.png)
-
+![](https://imgur.com/UR8FNBW)
 
 
 We can clearly see the higher number of Customer Service calls will likely lead to a customer leaving. Particularly after three calls, we saw an increase in churning. 
@@ -124,99 +127,8 @@ We can clearly see the higher number of Customer Service calls will likely lead 
 
 
 
-![](https://i.imgur.com/7ru6JnW.png)
-
 In the total day charge, we can see that customers are much more likely to churn right after the $38 day charge. Thus, this is an area of concern for SiryaTel.
 
-
-![](https://i.imgur.com/MGA6Vtd.png)
-
 We saw a similar pattern in the evening charge but with a more concentrated dollar amount. Roughly speaking, customers who were charged for the evening calls are much more likely to churn. 
-
-### Building Classified Models
-
-Our supervised learning task is a classification problem and therefore we will be labeling the data and then scaling it. We create ‘x’ and ‘y’ by selecting 'churn' from the dataset and then we create an 80/20 split on the dataset for training/test. We use random_state=10 to achieve reproducible results. 
-We scale the data using the Standard Scaler method and standardize the data by making the mean of the distribution zero and the majority of the data will be between -1 and 1.
-
-
-
-We will be using the following supervised learning algorithm.  While building our models we will be utilizing GridsearchCV, which is an exhaustive search technique to help us find optimal combination of hypermeters. 
-
-We train the models below and compare their performance. 
-
-* Logistic Regression
-* k-nearest neighbors (k-NN), 
-* DecisionTree 
-* XGBoost
-
-
-
-
-We then measure our performance by looking into various scores. We will investigate the following: 
-
-```
-
-Train_Accuracy = model.score(X_train_scaled,y_train)
-Test_Accuracy = model.score(X_test_scaled,y_test)
-Precision = precision_score(y_test,y_preds)
-Recall = recall_score(y_test,y_preds)
-f1_Score = f1_score(y_test,y_preds)
-
-
-```
-
-
-We also utilize the cross-validation score – which uses five different validation sets to average out and provide us with a more accurate measurement of performance. Specifically, we will be focusing on the recall score because we do not want to miss a false negative. If a customer left and we missed that data, it could be very costly for SyriaTel. We have a great need for precision because in the worst-case scenario we could offer a customer whom we mistakenly thought had left an incentive to stay with the company, which would be a very expensive error. 
-
-
-
-![](https://i.imgur.com/35rsPRC.png)
-
-
-
-![](https://i.imgur.com/4CrUtjg.png)
-
-
-We can’t rely on accuracy because it gives us deceiving results as our data in imbalanced.  The highest recall results were in XG Boost. 
-
-We look into which features have the most impact on the accuracy of out trained model XG Boost. 
-
-
-*On the Git hub page we dig even deeper and compare separately how well the two different classes (churn or no churn) were predicted by using classification reporting.* 
-
-### Features of Importance
-
-
-#### Voicemail Plan
-
-We found a voicemail plan stood out as one of the most important features. As seen in the graph, people with a voicemail plan are twice as less likely to churn. 
-
-Therefore, we recommend offering voicemail plans to customers who do not have them as part of the incentives used to retain customers. Perhaps when a customer calls the second or third time, SyrianTel can offer them a voicemail plan as a promotion if they don’t currently have one. 
-
-#### International Plan
-
-An international plan was also an important feature. Customers who had an international plan were four times as likely to churn. This is an element SyriaTel should focus on. Perhaps they could consider eliminating this specific plan and offer one reoccurring plan for all. 
-
-
-As expected, Customer Service calls were shown to be an important feature. As we see above, customers are five times more likely to churn after the third call. This supports our suggestion of offering an incentive to stay after the second and third call. SyriaTel can offer three weeks free of charge before subscribing for a year or as mentioned above, gift a customer a voicemail plan for three weeks as well. 
-
-
-#### States
-
-In addition to the states mentioned above, Oregon (OR) should be flagged, as it came out to be an important feature.  Customer Service should be aware of the states that customers are calling from. We recommend exploring the possibility of partnering with other companies. For instance – if a customer from Oregon calls the second time and already has a voicemail plan, one incentive could be to offer a gift from another vendor such as Uber EATS – e.g. a $10 credit to order food which might incentivize the client to stay. 
-
-
-### Next Step
-
-We would like to gather more data on the specific dates of churning. Ideally, we would be able to look at an individual account and learn the dates of a company subscribing and subsequently leaving. 
-
-Allowing us to look closely into customer satisfaction could be useful by offering a survey once a Customer Service call is complete. Perhaps also closely examining how long a customer waited before his request was satisfied would be beneficial. 
-
-Additionally, examining whether a flat fee per month would be more cost-effective than a reoccurring monthly charge with a certain number of minutes. 
-
-Lastly, we could consider using a different vendor or temporally partnering to offer incentives and promotions when a customer seems dissatisfied. This may increase satisfaction and reduce churning.
-
-Ultimately, we will implement the new features to see whether churning was reduced and calculate the cost of retaining the customers. 
-
 
 
