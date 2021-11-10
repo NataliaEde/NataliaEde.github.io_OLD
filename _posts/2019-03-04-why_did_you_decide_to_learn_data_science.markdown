@@ -225,15 +225,16 @@ In addition to the states mentioned above, Oregon (OR) should be flagged, as it 
 
 **Next Step**
 
-* We would like to gather more data on the specific dates of churning. Ideally, we would be able to look at an individual account and learn the dates of a company subscribing and subsequently leaving. 
+* We would like to gather more data on the specific dates of churning. Ideally, we would be able to look at an individual account and learn the dates of onboarding and subsequently leaving. 
 
-* Allowing us to look closely into customer satisfaction could be useful by offering a survey once a Customer Service call is complete. Perhaps also closely examining how long a customer waited before his request was satisfied would be beneficial. 
+* We will look closely into the customer satisfaction. We would like to evaluate the cost of offering a survey once a Customer Service call is complete. We will monitor how long a customer waited before his request was answered.
 
-* Additionally, we will examine whether a flat fee per month would be more cost-effective than a reoccurring monthly charge with a certain number of minutes. 
+* We will examine whether a flat fee per month would be more cost-effective than the current method of charge per minute.
 
-* We will consider using a different vendor or temporally partnering to offer incentives and promotions when a customer seems dissatisfied may increase satisfaction and reduce churning.
+* Additionally, we will consider using a different vendor or temporally partnering to offer incentives and promotions when a customer seems dissatisfied. This may increase satisfaction and reduce churning.
 
 * Ultimately, we will implement the new features to see whether churning was reduced and calculate the cost of retaining the customers. 
+
 
 
 
