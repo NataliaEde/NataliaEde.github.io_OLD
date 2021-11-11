@@ -15,18 +15,18 @@ Natalia Edelson
 Telecom companies have been facing the increasing  challenge of customer’s attrition. Telecom companies are focused on predicting customer churn in order to avoid a major fall in their revenue. It’s often the case that onboarding a new customer is more costly than retaining an existing client. For the purpose of this case study, we will gather data of the telecom company SyriaTel and our analysis will be centered around the possible ways it can reduce its churn.    
 
 
-SyriaTel had seen 16% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
-
+SyriaTel had seen 14.5% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
 
 
 We consider the telecom challenge as a classification problem in which we predict whether a customer will churn (1) or not (0). We will use machine learning methods to build out models to find the features of importance.
 
 We obtained the data from Kaggle and follow the below steps:
 
-1.	Preform a data cleaning.
+1.	Preform data cleaning.
 2.	Explore the data – we look for trends using statistical methods. 
-3.	Build classified models – Logistic Regression, k-nearest neighbors (k-NN), DecisionTree and XGBoost. We will tune the models as well aiming to get optimal results. 
-4.	Examine the features of impotence to interpret results and put them to use.  
+3.	Build classified models – Logistic Regression, k-nearest neighbors (k-NN), DecisionTree and XGBoost
+4.	We will tune the models as well aiming to get optimal results. 
+5.	Examine the features of impotence to interpret results and put them to use.  
 
 
 
@@ -136,7 +136,7 @@ In the total day charge, we can see that customers are much more likely to churn
 ![](https://i.imgur.com/7ru6JnW.png)
 
 
-We saw a similar pattern in the evening charge but with a more concentrated dollar amount. Roughly speaking, customers who were charged for the evening calls are much more likely to churn. 
+We saw a similar pattern in the evening charge but with a more concentrated dollar amount. Roughly speaking, customers who were charged above $18 for the evening calls are much more likely to churn. 
 
 
 ![](https://i.imgur.com/MGA6Vtd.png)
@@ -151,8 +151,7 @@ We saw a similar pattern in the evening charge but with a more concentrated doll
 
 Our supervised learning task is a classification problem and therefore we will be labeling the data and then scaling it. We create ‘x’ and ‘y’ by selecting 'churn' from the dataset and then we create an 80/20 split on the dataset for training/test. We use random_state=10 to achieve reproducible results. 
 We scale the data using the Standard Scaler method and standardize the data by making the mean of the distribution zero and the majority of the data will be between -1 and 1.
- Focused 
-
+  
 We will be using the following supervised learning algorithm.  While building our models we will be utilizing GridsearchCV, which is an exhaustive search technique to help us find optimal combination of hypermeters. 
 
 We train the models below and compare their performance. 
@@ -179,11 +178,11 @@ np.mean(cross_val_score(model, X_scaled, y, scoring="recall", cv = 5)))
 
 ```
 
-We also utilize the cross-validation score – which uses five different validation sets to average out and provide us with a more accurate measurement of performance. Specifically, we will be focusing on the recall score because we do not want to miss a false negative. If a customer left and we missed that data, it could be very costly for SyriaTel. We have a great need for precision because in the worst-case scenario we could offer a customer whom we mistakenly thought had left an incentive to stay with the company, which would be a very expensive error. 
+We also utilize the cross-validation score – which uses five different validation sets to average out and provide us with a more accurate measurement of performance. Specifically, we will be focusing on the recall score because we do not want to miss a false negative. If a customer left and we missed that data, it could be very costly for SyriaTel. We have a lesser need for precision because in the worst-case scenario we could offer a customer whom we mistakenly thought had left an incentive to stay with the company.
 
 We compare separately how well the two different classes (churn or no churn) were predicted by using classification reporting. 
 
-We can’t rely on accuracy because it gives us deceiving results as our data in imbalanced. 
+We can’t rely on accuracy because it gives us deceiving results as our data is imbalanced. 
 
 ![](https://i.imgur.com/orIr6nN.png)
 
@@ -192,8 +191,7 @@ The highest recall results were in XG Boost.
 
 ![](https://i.imgur.com/4CrUtjg.png)
 
-We look into which features have the most impact on the accuracy of out trained model XG Boost. 
-
+We investigate which features have the most impact on the accuracy of our trained model XG Boost. 
 
 ![](https://i.imgur.com/VsSZ8D9.png)
 
