@@ -17,6 +17,7 @@ Telecom companies have been facing the increasing  challenge of customer’s att
 
 SyriaTel had seen 14.5% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
 
+![](https://i.imgur.com/IFLs63A.png?2)
 
 We consider the telecom challenge as a classification problem in which we predict whether a customer will churn (1) or not (0). We will use machine learning methods to build out models to find the features of importance.
 
@@ -198,8 +199,8 @@ We investigate which features have the most impact on the accuracy of our traine
 
 
 
-**Features of Importance
-**
+**Features of Importance**
+
 **Voicemail Plan**
 
 We found a voicemail plan stood out as one of the most important features. As seen in the graph, people with a voicemail plan are twice as less likely to churn. 
@@ -210,6 +211,7 @@ Therefore, we recommend offering voicemail plans to customers who do not have th
 
 An international plan was also an important feature. Customers who had an international plan were four times as likely to churn. This is an element SyriaTel should focus on. Perhaps they could consider eliminating this specific plan and offer one reoccurring plan for all. 
 
+**Customer Service calls**
 
 As expected, Customer Service calls were shown to be an important feature. As we see above, customers are five times more likely to churn after the third call. This supports our suggestion of offering an incentive to stay after the second and third call. SyriaTel can offer three weeks free of charge before subscribing for a year or as mentioned above, gift a customer a voicemail plan for three weeks as well. 
 
@@ -234,11 +236,7 @@ In addition to the states mentioned above, Oregon (OR) should be flagged, as it 
 * Ultimately, we will implement the new features to see whether churning was reduced and calculate the cost of retaining the customers. 
 
 
-
-
-
-
-
+![](https://i.imgur.com/wgQyKKx.jpg)
 
 
 
