@@ -5,7 +5,7 @@ header-img: img/home-bg.png
 email: nataliagoncharov@gmail.com
 copyright_name: Natalia Edelson
 description: > # this means to ignore newlines until "baseurl:"
-  Using Python 
+  “That which cannot be measured cannot be proven.” - Anthony Richardson
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  NataliaEde
