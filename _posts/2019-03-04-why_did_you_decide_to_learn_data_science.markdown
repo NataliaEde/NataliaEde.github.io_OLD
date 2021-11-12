@@ -15,7 +15,7 @@ Natalia Edelson
 Telecom companies have been facing the increasing  challenge of customer’s attrition. Telecom companies are focused on predicting customer churn in order to avoid a major fall in their revenue. It’s often the case that onboarding a new customer is more costly than retaining an existing client. For the purpose of this case study, we will gather data of the telecom company SyriaTel and our analysis will be centered around the possible ways it can reduce its churn.    
 
 
-SyriaTel had seen 14.5% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
+SyriaTel has seen 14.5% of customers leave their business.  We built an analysis using Python with Scikit-Learn to find the important factors contributing to customer churn the most. We built a predicting model to allow us to obtain the insight of the features that should be closely monitored in order to reduce customer churn in SyrianTel.
 
 ![](https://i.imgur.com/IFLs63A.png?2)
 
@@ -75,9 +75,6 @@ display(Customer_Churn.describe())
 ```
 
 
-
-
-
 ![](https://imgur.com/eYPcNof) 
 
 
@@ -129,9 +126,7 @@ We can clearly see the higher number of Customer Service calls will likely lead 
 ![](https://i.imgur.com/yVjPQTr.png)
 
 
-
 In the total day charge, we can see that customers are much more likely to churn right after the $38 day charge. Thus, this is an area of concern for SiryaTel.
-
 
 
 ![](https://i.imgur.com/7ru6JnW.png)
@@ -141,9 +136,6 @@ We saw a similar pattern in the evening charge but with a more concentrated doll
 
 
 ![](https://i.imgur.com/MGA6Vtd.png)
-
-
-
 
 
 
@@ -161,8 +153,6 @@ Logistic Regression
 k-nearest neighbors (k-NN), 
 DecisionTree 
 XGBoost.
-
-
 
 
 We then measure our performance by looking into various scores. We will investigate the following: 
@@ -189,14 +179,11 @@ We can’t rely on accuracy because it gives us deceiving results as our data is
 
 The highest recall results were in XG Boost. 
 
-
 ![](https://i.imgur.com/4CrUtjg.png)
 
 We investigate which features have the most impact on the accuracy of our trained model XG Boost. 
 
 ![](https://i.imgur.com/VsSZ8D9.png)
-
-
 
 
 **Features of Importance**
@@ -218,9 +205,7 @@ As expected, Customer Service calls were shown to be an important feature. As we
 
 **States**
 
-In addition to the states mentioned above, Oregon (OR) should be flagged, as it came out to be an important feature.  Customer Service should be aware of the states that customers are calling from. We recommend exploring the possibility of partnering with other companies. For instance – if a customer from Oregon calls the second time and already has a voicemail plan, one incentive could be to offer a gift from another vendor such as Uber EATS – e.g. a $10 credit to order food which might incentivize the client to stay. 
-
-
+In addition to the states mentioned on our GitHub(code) page, Oregon (OR) should be flagged, as it came out to be an important feature.  Customer Service should be aware of the states that customers are calling from. We recommend exploring the possibility of partnering with other companies. For instance – if a customer from Oregon calls the second time and already has a voicemail plan, one incentive could be to offer a gift from another vendor such as Uber EATS – e.g. a $10 credit to order food which might incentivize the client to stay. 
 
 
 **Next Step**
