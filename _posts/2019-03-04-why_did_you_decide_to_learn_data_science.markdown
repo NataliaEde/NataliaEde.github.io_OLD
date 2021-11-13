@@ -5,7 +5,7 @@ date:       2019-03-04 20:29:25 -0500
 permalink:  why_did_you_decide_to_learn_data_science
 ---
 
-#### SyriaTel Churning Analysis 
+#### SyriaTel Churn Analysis 
 
 Natalia Edelson
 
